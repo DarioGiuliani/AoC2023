@@ -1,7 +1,7 @@
 from utils.file_reader import FileReader
 from classes.game import Game,Cubes
 
-input = FileReader.readfile("day2part1input.txt")
+input = FileReader.readfile("day2part2input.txt")
 total = 0
 
 for element in input:
@@ -24,6 +24,5 @@ for element in input:
                 blue = int(set_element.strip().split(" ")[0].strip())
         collect_subsets.append(Cubes(red, blue, green))
     game = Game(game_id, collect_subsets)
-    if game.is_possible(12, 14, 13):  
-        total += game.id
+    total += game.minimal_amount_power()
 print(total)
