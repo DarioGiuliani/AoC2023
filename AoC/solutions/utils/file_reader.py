@@ -1,8 +1,8 @@
 class FileReader:
-    def readFile(fileName):
-        fileLocation = "input/{}"
+    def readfile(fileName):
+        file_location = "input/{}"
 
-        file = open(fileLocation.format(fileName))
+        file = open(file_location.format(fileName))
         data = file.readlines()
         file.close()
         return data
